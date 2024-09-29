@@ -12,16 +12,13 @@ public class EventService_Await : MonoBehaviour
     [SerializeField]
     private float cooldownBeforeSend = 3f;
 
-    [SerializeField]
     // currently processing events
     private WrapperEvents sendingEvents;
 
-    [SerializeField]
     // events waiting for sending
     private WrapperEvents waitedEvents;
-    [SerializeField]
+
     private bool isSending = false;
-    [SerializeField]
     private bool isCooldown = false;
 
     private bool CanSend => !isSending && !isCooldown;
